@@ -91,7 +91,7 @@ void KY033::lineSensorThread()
 {
     startPosition();
     while(state_->running){
-        online();
+        onLine();
         std::this_thread::sleep_for(std::chrono::milliseconds(50)); // Lille pause
     }   
 }
