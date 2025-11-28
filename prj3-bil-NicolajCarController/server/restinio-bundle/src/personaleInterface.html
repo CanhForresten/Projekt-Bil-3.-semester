@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <title>Personale-interface</title>
+    <script>
+function sendOrder() { // En function der hiver data ud af skrivefelter, og værdien ud af den valgte stationsknap, og smider det i et javascrip object kaldet data.
+
+    const station = document.querySelector('input[name="station"]:checked');
+    const modtager = document.getElementById("modtagerfelt").value;
+    const genstand= document.getElementById("ordrefelt").value;
+
+
+    const data = {
+        station: station.value,
+        modtager: modtager,
+        genstand: genstand
+    };
+
+    fetch("/submit_personale", { //Fetch kommer fra et javascript interface. Den sender et request til server om at lave et POST til stien angivet, viser at det er json der postes, og konverterer data objectet til en json streng server kan bruge til ctor af order object
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+    })
+    .then(msg => alert("Ordre sendt!")) //.then er notation for en function der definerer hvad der skal ske efter server kommer med response på POST requestet.
+    
+    //Forneden kaldes funtionen som handlingen på et click på bekræft ordre
+}
+
+
+function poll_AGV_Status() {
+    fetch('/personale/AGV_status') // Kaldes som default som et GET request på stien givet som parameter. res er HTTP responsen, som ændres til JSON text, der kan fungerer med et javascript objekt
+        .then(res => res.json())
+        .then(data => { //data er javascript objektet der nu har HTTP responsen fra GET kaldet på AGVstatus endpointet. Dataen kan nu tilgås og sammenlignes, og til slut kalde passende funktioner der ændrer html-siden på browseren/klienten
+            if (data.status === "tændt") setStatus_tændt_NR();
+            else if (data.status === "tændt/klar") setStatus_tændt_R();
+            else setStatus_off();
+        })
+    }
+
+
+    setInterval(poll_AGV_Status, 2000); // Dette tvinger browseren til at kalde poll funktionen, og dermed tjekke på server, om der er kommet en mqtt besked, der kræver at websiden ændres.
+
+
+</script>
+
+<script>
+    //Disse funktioner ændrer teksten defineret direkte under AGV status headeren på side. Status teksten har et id, som bruges som handle til at tildele en passende klasse med farvekodning (defineret forneden), samt ændre teksten.
+    //Funktionerne testes med knapper
+    function setStatus_tændt_NR() {
+
+        document.getElementById("Status").innerHTML = "Tændt/ikke klar";
+        document.getElementById("Status").setAttribute("class","AGV_status_NR");
+    }
+    function setStatus_tændt_R() {
+
+        document.getElementById("Status").innerHTML = "Tændt/klar";
+        document.getElementById("Status").setAttribute("class","AGV_status_R");
+    }
+    function setStatus_off() {
+
+        document.getElementById("Status").innerHTML = "Slukket";
+        document.getElementById("Status").setAttribute("class","AGV_status_off");
+    }
+
+</script>
+
+
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+            font-family: Arial, sans-serif;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"], button {
+            margin-top: 5px;
+            width: 200px;
+            padding: 5px;
+        }
+        .radio-group {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        .radio-option {
+            margin-right: 15px;
+        }
+        .AGV_status_off {
+            color: red;
+            }
+        .AGV_status_NR {
+            color: yellowgreen;
+            }
+        .AGV_status_R {
+            color: green;
+            }
+    </style>
+</head>
+<body>
+    <h1>Personal-interface</h1>
+
+     <div>
+        <h2>AGV status:</h2>
+    <p id="Status" class="AGV_status_off" >Slukket</p>
+    </div>
+
+    <p>Ny ordre</p>
+    <p>Vælg station:</p>
+
+
+    <form id="ordreForm">
+        <div class="radio-group">
+            <label class="radio-option">
+                <input type="radio" name="station" value="1" required> 1
+            </label>
+            <label class="radio-option">
+                <input type="radio" name="station" value="2"> 2
+            </label>
+            <label class="radio-option">
+                <input type="radio" name="station" value="3"> 3
+            </label>
+            <label class="radio-option">
+                <input type="radio" name="station" value="4"> 4
+            </label>
+        </div>
+
+        <label for="modtagerfelt">Modtagerfelt:</label>
+        <input type="text" id="modtagerfelt" name="modtagerfelt" required>
+
+        <label for="ordrefelt">Ordrefelt:</label>
+        <input type="text" id="ordrefelt" name="ordrefelt" required>
+
+        <div style="text-align:center; margin-top:20px;">
+            <button type="button" onclick="sendOrder()">Bekræft ordre</button>
+        </div>
+    </form>
+    <button onclick="window.location.href='/ordre'">Vis Ordre</button>
+    <!--fjernkommentering for at bruge testknapper til status besked
+
+    <button type="button" onclick="setStatus_tændt_NR()">test status ikke klar</button>
+    <button type="button" onclick="setStatus_tændt_R()">test status klar</button>
+    <button type="button" onclick="setStatus_off()">test status slukket</button>
+-->
+
+
+</body>
+</html>
