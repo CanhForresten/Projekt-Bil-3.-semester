@@ -12,7 +12,7 @@ struct Boks {
 
 struct AGVstate
 {
-     std::array<Boks> boxes = {{
+    std::array<Boks, 4> boxes = {{
         Boks{}, Boks{}, Boks{}, Boks{}
     }};
 

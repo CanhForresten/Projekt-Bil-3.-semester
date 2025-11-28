@@ -12,6 +12,19 @@
 #include <string>
 #include <vector>
 
+struct Ordrestate {
+    std::string id;
+    std::string station;
+
+    std::condition_variable cv_order; // cv at notify når msg's bliver pushed til queue fra mqtt callback functionen
+    std::mutex q_order_mut; // mutex til at beskytte fælles queue som tilgås af både beskedprocesserings-tråden og mqtt subscriberen
+    std::queue<int> stations_q;
+
+    // RETTELSE: Tilføjet manglende funktion
+    bool hasNextStation() {
+        return !stations_q.empty();
+    }
+};
 
 struct CompareStationStrAsNumber {
     bool operator()(Ordrestate& a, Ordrestate& b) const {
@@ -25,14 +38,7 @@ inline std::ostream& operator<<(std::ostream& os, const Ordrestate& o) {
     return os;
 }
 
-struct Ordrestate {
-    std::string id;
-    std::string station;
 
-    std::condition_variable cv_order; // cv at notify når msg's bliver pushed til queue fra mqtt callback functionen
-    std::mutex q_order_mut; // mutex til at beskytte fælles queue som tilgås af både beskedprocesserings-tråden og mqtt subscriberen
-    std::queue<int> stations_q;
-};
 
 
 class CarController {

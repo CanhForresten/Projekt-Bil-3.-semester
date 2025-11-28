@@ -5,7 +5,7 @@ CarController::CarController(AGVstate *state)
     motor(state_),
     bokse_led({5,6,13,19}),
     go_button(17),
-    shutdown_button(17, state_),
+    shutdown_button(17, state_), // RETTELSE: Tilføjet state_ her
     status_led(22)
 {
 }
@@ -413,4 +413,3 @@ void CarController::returnToStart(int startStationID) {
     
     std::cout << "AGV tilbage i start " << startStationID << ", klar til næste tur" << std::endl;
 }
-
