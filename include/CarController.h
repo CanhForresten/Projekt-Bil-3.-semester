@@ -21,7 +21,7 @@ struct CompareStationStrAsNumber {
 
 inline std::ostream& operator<<(std::ostream& os, const Ordrestate& o) {
     os << " ID: " << o.id
-       << " |Station: " << o.station
+       << " |Station: " << o.station;
     return os;
 }
 
@@ -51,7 +51,7 @@ public:
     void start();
     void pak();
     void drive();
-    void station(Ordrestate ordre);
+    void station(Ordrestate& ordre);
     void Obstacle();
     void carControllerThread();
     void returnToStart(int startStationID);

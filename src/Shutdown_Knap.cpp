@@ -1,7 +1,7 @@
 #include "Shutdown_Knap.h"
 
-Shutdown_Knap::Shutdown_Knap(int gpio_pin)
-    : pin(gpio_pin)
+Shutdown_Knap::Shutdown_Knap(int gpio_pin, AGVstate* state)
+    : pin(gpio_pin), state_(state)
 {
 }
 

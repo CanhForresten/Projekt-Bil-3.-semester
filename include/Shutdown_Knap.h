@@ -17,10 +17,10 @@ private:
     gpiohandle_request req{};
     gpiohandle_data data{};
     int pin;
-    AGVstate state_;
+    AGVstate* state_;
 
 public:
-    Shutdown_Knap(int gpio_pin, AGVstate state);   // constructor
+    Shutdown_Knap(int gpio_pin, AGVstate* state);   // constructor
     ~Shutdown_Knap();              // destructor
 
     void init();                   // initialize GPIO

@@ -31,7 +31,7 @@ void on_mqtt_message(struct mosquitto *mosq, void *userdata,
 auto mqtt_subscriber_carcontroller(Ordrestate *ordre) {
 
     mosquitto_lib_init();
-    mosquitto *mosq = mosquitto_new("carcontroller_subscriber", true, &ordre); // Laver ny mosquitto client instans med navn, true for clean session i.e fjerner alle subcribtions og msg efter disconnect
+    mosquitto *mosq = mosquitto_new("carcontroller_subscriber", true, ordre);  // Laver ny mosquitto client instans med navn, true for clean session i.e fjerner alle subcribtions og msg efter disconnect
     mosquitto_connect(mosq, "localhost", 1883, 60); // Indsæt server pi adresse
     mosquitto_subscribe(mosq, nullptr, "/service/order", 0);
     mosquitto_message_callback_set(mosq, on_mqtt_message); // Hvis broker modtager en besked kaldes on_message

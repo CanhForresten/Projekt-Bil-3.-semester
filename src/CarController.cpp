@@ -278,7 +278,7 @@ void CarController::callHelp()
 
 /* ---------------- STATION ---------------- */
 
-void CarController::station(Ordrestate ordre) {
+void CarController::station(Ordrestate& ordre) {
     
     int boxIndex = -1;
     for (int i = 0; i < (int)state_->boxes.size(); i++) { //finder boksen der tilhører order og station

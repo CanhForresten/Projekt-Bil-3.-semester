@@ -1,0 +1,3 @@
+/Users/miyagi/Documents/GitHub/Projekt-Bil-3.-semester/build/CMakeFiles/agv.dir
+/Users/miyagi/Documents/GitHub/Projekt-Bil-3.-semester/build/CMakeFiles/edit_cache.dir
+/Users/miyagi/Documents/GitHub/Projekt-Bil-3.-semester/build/CMakeFiles/rebuild_cache.dir

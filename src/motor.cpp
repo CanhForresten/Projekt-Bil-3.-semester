@@ -41,7 +41,7 @@ Motor::~Motor()
 }
 
 void Motor::init(int GPIO_IN1, int GPIO_IN2, int GPIO_IN3, int GPIO_IN4, int PWM_channel_A_, int PWM_channel_B_){
-    std::lock_guard(state_->controller_mtx);
+    std::lock_guard<std::mutex> lock(state_->controller_mtx);
     PWM_channel_A = PWM_channel_A_;
     PWM_channel_B = PWM_channel_B_;
 

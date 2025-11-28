@@ -6,7 +6,7 @@
 #include "DistanceSensor.h"
 #include "mqtt_publisher.hpp"
 #include "Shutdown_Knap.h"
-#include "mqtt_subscriber.hpp"
+#include "mqtt_subscriber_carcontroller.hpp" // Ret filnavn
 
 int main() {
     std::cout << "Starting AGV system..." << std::endl;
@@ -30,7 +30,7 @@ int main() {
     std::thread mqttPubThread(mqtt_publisher, &agvState);
 
     // MQTT Subscriber: modtager ordre fra server og fylder ordre-kø
-    std::thread mqttSubThread(mqtt_subscriber, &ordreState);
+std::thread mqttSubThread(mqtt_subscriber_carcontroller, &ordreState);
 
     // Line sensor tråd
     std::thread lineSensorThread(&KY033::lineSensorThread, &lineTracker);
