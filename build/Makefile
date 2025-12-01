@@ -273,6 +273,30 @@ src/Status_LED.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/agv.dir/build.make CMakeFiles/agv.dir/src/Status_LED.cpp.s
 .PHONY : src/Status_LED.cpp.s
 
+src/c.o: src/c.cpp.o
+.PHONY : src/c.o
+
+# target to build an object file
+src/c.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/agv.dir/build.make CMakeFiles/agv.dir/src/c.cpp.o
+.PHONY : src/c.cpp.o
+
+src/c.i: src/c.cpp.i
+.PHONY : src/c.i
+
+# target to preprocess a source file
+src/c.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/agv.dir/build.make CMakeFiles/agv.dir/src/c.cpp.i
+.PHONY : src/c.cpp.i
+
+src/c.s: src/c.cpp.s
+.PHONY : src/c.s
+
+# target to generate assembly for a file
+src/c.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/agv.dir/build.make CMakeFiles/agv.dir/src/c.cpp.s
+.PHONY : src/c.cpp.s
+
 src/lineSensor.o: src/lineSensor.cpp.o
 .PHONY : src/lineSensor.o
 
@@ -372,6 +396,9 @@ help:
 	@echo "... src/Status_LED.o"
 	@echo "... src/Status_LED.i"
 	@echo "... src/Status_LED.s"
+	@echo "... src/c.o"
+	@echo "... src/c.i"
+	@echo "... src/c.s"
 	@echo "... src/lineSensor.o"
 	@echo "... src/lineSensor.i"
 	@echo "... src/lineSensor.s"

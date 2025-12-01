@@ -37,6 +37,12 @@
 },
 {
   "directory": "/Users/miyagi/Documents/GitHub/Projekt-Bil-3.-semester/build",
+  "command": "/usr/bin/clang++  -I/Users/miyagi/Documents/GitHub/Projekt-Bil-3.-semester/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/agv.dir/src/c.cpp.o -c /Users/miyagi/Documents/GitHub/Projekt-Bil-3.-semester/src/c.cpp",
+  "file": "/Users/miyagi/Documents/GitHub/Projekt-Bil-3.-semester/src/c.cpp",
+  "output": "CMakeFiles/agv.dir/src/c.cpp.o"
+},
+{
+  "directory": "/Users/miyagi/Documents/GitHub/Projekt-Bil-3.-semester/build",
   "command": "/usr/bin/clang++  -I/Users/miyagi/Documents/GitHub/Projekt-Bil-3.-semester/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/agv.dir/src/lineSensor.cpp.o -c /Users/miyagi/Documents/GitHub/Projekt-Bil-3.-semester/src/lineSensor.cpp",
   "file": "/Users/miyagi/Documents/GitHub/Projekt-Bil-3.-semester/src/lineSensor.cpp",
   "output": "CMakeFiles/agv.dir/src/lineSensor.cpp.o"

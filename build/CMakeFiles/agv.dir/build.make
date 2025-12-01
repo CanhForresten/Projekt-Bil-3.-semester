@@ -156,10 +156,24 @@ CMakeFiles/agv.dir/src/Status_LED.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/agv.dir/src/Status_LED.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/miyagi/Documents/GitHub/Projekt-Bil-3.-semester/src/Status_LED.cpp -o CMakeFiles/agv.dir/src/Status_LED.cpp.s
 
+CMakeFiles/agv.dir/src/c.cpp.o: CMakeFiles/agv.dir/flags.make
+CMakeFiles/agv.dir/src/c.cpp.o: /Users/miyagi/Documents/GitHub/Projekt-Bil-3.-semester/src/c.cpp
+CMakeFiles/agv.dir/src/c.cpp.o: CMakeFiles/agv.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/miyagi/Documents/GitHub/Projekt-Bil-3.-semester/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/agv.dir/src/c.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/agv.dir/src/c.cpp.o -MF CMakeFiles/agv.dir/src/c.cpp.o.d -o CMakeFiles/agv.dir/src/c.cpp.o -c /Users/miyagi/Documents/GitHub/Projekt-Bil-3.-semester/src/c.cpp
+
+CMakeFiles/agv.dir/src/c.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/agv.dir/src/c.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/miyagi/Documents/GitHub/Projekt-Bil-3.-semester/src/c.cpp > CMakeFiles/agv.dir/src/c.cpp.i
+
+CMakeFiles/agv.dir/src/c.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/agv.dir/src/c.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/miyagi/Documents/GitHub/Projekt-Bil-3.-semester/src/c.cpp -o CMakeFiles/agv.dir/src/c.cpp.s
+
 CMakeFiles/agv.dir/src/lineSensor.cpp.o: CMakeFiles/agv.dir/flags.make
 CMakeFiles/agv.dir/src/lineSensor.cpp.o: /Users/miyagi/Documents/GitHub/Projekt-Bil-3.-semester/src/lineSensor.cpp
 CMakeFiles/agv.dir/src/lineSensor.cpp.o: CMakeFiles/agv.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/miyagi/Documents/GitHub/Projekt-Bil-3.-semester/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/agv.dir/src/lineSensor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/miyagi/Documents/GitHub/Projekt-Bil-3.-semester/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/agv.dir/src/lineSensor.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/agv.dir/src/lineSensor.cpp.o -MF CMakeFiles/agv.dir/src/lineSensor.cpp.o.d -o CMakeFiles/agv.dir/src/lineSensor.cpp.o -c /Users/miyagi/Documents/GitHub/Projekt-Bil-3.-semester/src/lineSensor.cpp
 
 CMakeFiles/agv.dir/src/lineSensor.cpp.i: cmake_force
@@ -173,7 +187,7 @@ CMakeFiles/agv.dir/src/lineSensor.cpp.s: cmake_force
 CMakeFiles/agv.dir/src/main.cpp.o: CMakeFiles/agv.dir/flags.make
 CMakeFiles/agv.dir/src/main.cpp.o: /Users/miyagi/Documents/GitHub/Projekt-Bil-3.-semester/src/main.cpp
 CMakeFiles/agv.dir/src/main.cpp.o: CMakeFiles/agv.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/miyagi/Documents/GitHub/Projekt-Bil-3.-semester/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/agv.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/miyagi/Documents/GitHub/Projekt-Bil-3.-semester/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/agv.dir/src/main.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/agv.dir/src/main.cpp.o -MF CMakeFiles/agv.dir/src/main.cpp.o.d -o CMakeFiles/agv.dir/src/main.cpp.o -c /Users/miyagi/Documents/GitHub/Projekt-Bil-3.-semester/src/main.cpp
 
 CMakeFiles/agv.dir/src/main.cpp.i: cmake_force
@@ -187,7 +201,7 @@ CMakeFiles/agv.dir/src/main.cpp.s: cmake_force
 CMakeFiles/agv.dir/src/motor.cpp.o: CMakeFiles/agv.dir/flags.make
 CMakeFiles/agv.dir/src/motor.cpp.o: /Users/miyagi/Documents/GitHub/Projekt-Bil-3.-semester/src/motor.cpp
 CMakeFiles/agv.dir/src/motor.cpp.o: CMakeFiles/agv.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/miyagi/Documents/GitHub/Projekt-Bil-3.-semester/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/agv.dir/src/motor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/miyagi/Documents/GitHub/Projekt-Bil-3.-semester/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/agv.dir/src/motor.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/agv.dir/src/motor.cpp.o -MF CMakeFiles/agv.dir/src/motor.cpp.o.d -o CMakeFiles/agv.dir/src/motor.cpp.o -c /Users/miyagi/Documents/GitHub/Projekt-Bil-3.-semester/src/motor.cpp
 
 CMakeFiles/agv.dir/src/motor.cpp.i: cmake_force
@@ -206,6 +220,7 @@ agv_OBJECTS = \
 "CMakeFiles/agv.dir/src/GO_Knap.cpp.o" \
 "CMakeFiles/agv.dir/src/Shutdown_Knap.cpp.o" \
 "CMakeFiles/agv.dir/src/Status_LED.cpp.o" \
+"CMakeFiles/agv.dir/src/c.cpp.o" \
 "CMakeFiles/agv.dir/src/lineSensor.cpp.o" \
 "CMakeFiles/agv.dir/src/main.cpp.o" \
 "CMakeFiles/agv.dir/src/motor.cpp.o"
@@ -219,12 +234,13 @@ bin/agv: CMakeFiles/agv.dir/src/DistanceSensor.cpp.o
 bin/agv: CMakeFiles/agv.dir/src/GO_Knap.cpp.o
 bin/agv: CMakeFiles/agv.dir/src/Shutdown_Knap.cpp.o
 bin/agv: CMakeFiles/agv.dir/src/Status_LED.cpp.o
+bin/agv: CMakeFiles/agv.dir/src/c.cpp.o
 bin/agv: CMakeFiles/agv.dir/src/lineSensor.cpp.o
 bin/agv: CMakeFiles/agv.dir/src/main.cpp.o
 bin/agv: CMakeFiles/agv.dir/src/motor.cpp.o
 bin/agv: CMakeFiles/agv.dir/build.make
 bin/agv: CMakeFiles/agv.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/miyagi/Documents/GitHub/Projekt-Bil-3.-semester/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable bin/agv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/miyagi/Documents/GitHub/Projekt-Bil-3.-semester/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable bin/agv"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/agv.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/agv.dir/src/Shutdown_Knap.cpp.o.d"
   "CMakeFiles/agv.dir/src/Status_LED.cpp.o"
   "CMakeFiles/agv.dir/src/Status_LED.cpp.o.d"
+  "CMakeFiles/agv.dir/src/c.cpp.o"
+  "CMakeFiles/agv.dir/src/c.cpp.o.d"
   "CMakeFiles/agv.dir/src/lineSensor.cpp.o"
   "CMakeFiles/agv.dir/src/lineSensor.cpp.o.d"
   "CMakeFiles/agv.dir/src/main.cpp.o"
